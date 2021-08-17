@@ -3,13 +3,13 @@
 import 'dart:io';
 import 'dart:math';
 
-String prompt(String promptText){
-  print(promptText);
-  var answer = stdin.readLineSync()!;
-  return answer;
-}
+const isAdmin = true;
+const isUser = false;
 
 void main() {
-  String color = prompt('Enter you\'r color :');
-  print('the color is $color');
+  if (isAdmin == false && isUser == false) {
+    print('yep tha\'s true');
+  } else {
+    print('No tha\'s false');
+  }
 }
